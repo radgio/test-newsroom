@@ -1,4 +1,18 @@
-baseURL = "http://IP_DEL_NUOVO_CONTAINER/"
-locale = "it-it"
+baseURL = "https://news-miccini.duckdns.org/"
 title = "Test Newsroom"
 theme = "newsroom"
+
+defaultContentLanguage = "it"
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.it]
+    languageName = "Italiano"
+    weight = 1
+    locale = "it-IT" # Usato per la formattazione di date e numeri
+
+[params]
+  defaultMode = "light" # o "dark"
+  # Diciamo al tema di mostrare gli articoli nella home
+  [params.home]
+    showDescription = true
