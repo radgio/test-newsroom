@@ -1,0 +1,34 @@
+media:
+  input: static/images   # Cartella dove Pages CMS salverà le immagini caricate
+  output: /images        # URL pubblico con cui Hugo le servirà
+
+content:
+  - name: "post"
+    label: "Articoli"
+    type: "collection"
+    path: "content/post"   # La cartella dei tuoi articoli Hugo
+    create: true           # Permette di creare nuovi articoli
+    delete: true           # Permette di cancellare articoli
+    fields:
+      - name: "title"
+        label: "Titolo"
+        type: "string"
+        required: true
+      - name: "date"
+        label: "Data"
+        type: "date"
+        options:
+          format: "yyyy-MM-dd"
+        required: true
+      - name: "author"
+        label: "Autore"
+        type: "string"
+      - name: "summary"
+        label: "Sommario"
+        type: "text"
+      - name: "image"
+        label: "Immagine di copertina"
+        type: "image"      # Campo per selezionare un'immagine da media
+      - name: "body"
+        label: "Corpo dell'articolo"
+        type: "rich-text"  # Editor di testo (Markdown)
