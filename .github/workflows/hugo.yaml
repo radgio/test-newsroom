@@ -18,7 +18,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.147.2 # Assicurati che sia >= alla tua versione locale
+      HUGO_VERSION: 0.147.2
     steps:
       - name: Install Hugo CLI (Extended)
         run: |
@@ -26,14 +26,14 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6   # Aggiornato da v4
         with:
           submodules: recursive
           fetch-depth: 0
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v6   # Aggiornato da v4
 
       - name: Build with Hugo
         env:
