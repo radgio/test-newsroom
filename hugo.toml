@@ -1,0 +1,4 @@
+baseURL = "http://IP_DEL_NUOVO_CONTAINER/"
+locale = "it-it"
+title = "Test Newsroom"
+theme = "newsroom"

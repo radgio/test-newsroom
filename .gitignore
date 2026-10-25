@@ -1,0 +1,7 @@
+# File generati da Hugo
+public/
+resources/
+.hugo_build.lock
+
+# File di sistema
+.DS_Store
